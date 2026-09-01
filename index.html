@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dra. Liz Vera | Consultorio Dental</title>
+  <title>Dra. Liz Vera | Odontología</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +21,10 @@
       background: #ffffff;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: fixed;
@@ -45,11 +49,13 @@
       font-size: 22px;
       font-weight: bold;
       color: #167b82;
+      letter-spacing: 1px;
     }
 
     .logo span {
-      color: #333;
+      color: #555;
       font-weight: normal;
+      font-size: 14px;
     }
 
     nav a {
@@ -64,30 +70,37 @@
       color: #167b82;
     }
 
-    /* HERO */
+
+    /* =========================
+       PORTADA
+    ========================= */
 
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 100px 10%;
+
       background:
         linear-gradient(
           90deg,
-          rgba(255,255,255,.96) 40%,
-          rgba(255,255,255,.45)
+          rgba(255,255,255,.95) 25%,
+          rgba(255,255,255,.55) 48%,
+          rgba(255,255,255,.05) 75%
         ),
-        url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80');
+        url('dra-liz-recepcion.jpeg');
+
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 600px;
     }
 
     .hero h1 {
-      font-size: 58px;
+      font-size: 60px;
       color: #1c5559;
       margin-bottom: 20px;
       line-height: 1.1;
@@ -107,23 +120,32 @@
       color: #555;
     }
 
+
+    /* =========================
+       BOTONES
+    ========================= */
+
     .btn {
       display: inline-block;
       background: #167b82;
       color: white;
-      padding: 15px 28px;
+      padding: 15px 30px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
       transition: .3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,.12);
     }
 
     .btn:hover {
       background: #105e63;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    /* SECCIONES */
+
+    /* =========================
+       SECCIONES GENERALES
+    ========================= */
 
     section {
       padding: 90px 10%;
@@ -135,7 +157,7 @@
     }
 
     .section-title h2 {
-      font-size: 38px;
+      font-size: 40px;
       color: #1c5559;
       margin-bottom: 12px;
     }
@@ -145,7 +167,10 @@
       font-size: 17px;
     }
 
-    /* SERVICIOS */
+
+    /* =========================
+       SERVICIOS
+    ========================= */
 
     .services {
       background: #f4f9f9;
@@ -170,6 +195,7 @@
 
     .service-card:hover {
       transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.10);
     }
 
     .icon {
@@ -187,6 +213,7 @@
     .service-card h3 {
       margin-bottom: 12px;
       color: #1c5559;
+      font-size: 20px;
     }
 
     .service-card p {
@@ -195,7 +222,10 @@
       font-size: 15px;
     }
 
-    /* SOBRE LA DOCTORA */
+
+    /* =========================
+       SOBRE LA DOCTORA
+    ========================= */
 
     .about {
       display: grid;
@@ -206,14 +236,24 @@
       margin: auto;
     }
 
+    .about-image {
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.15);
+    }
+
     .about-image img {
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      display: block;
+      transition: .4s;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.03);
     }
 
     .about-text h2 {
-      font-size: 42px;
+      font-size: 45px;
       color: #1c5559;
       margin-bottom: 20px;
     }
@@ -229,9 +269,13 @@
       line-height: 1.8;
       color: #666;
       margin-bottom: 20px;
+      font-size: 17px;
     }
 
-    /* GALERIA */
+
+    /* =========================
+       GALERIA
+    ========================= */
 
     .gallery {
       background: #f4f9f9;
@@ -239,28 +283,32 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      max-width: 1200px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 260px;
+      height: 450px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.10);
       transition: .3s;
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
-    /* CONTACTO */
+
+    /* =========================
+       CONTACTO
+    ========================= */
 
     .contact {
-      background: #167b82;
+      background: linear-gradient(135deg, #167b82, #103f42);
       color: white;
       text-align: center;
     }
@@ -281,24 +329,34 @@
       margin-top: 20px;
     }
 
-    /* FOOTER */
+    .contact .btn:hover {
+      background: #f2f2f2;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #103f42;
+      background: #0d3033;
       color: white;
       text-align: center;
       padding: 25px;
       font-size: 14px;
     }
 
-    /* WHATSAPP */
+
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     .whatsapp {
       position: fixed;
       right: 25px;
       bottom: 25px;
-      width: 60px;
-      height: 60px;
+      width: 62px;
+      height: 62px;
       background: #25D366;
       color: white;
       border-radius: 50%;
@@ -306,12 +364,20 @@
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      font-size: 28px;
+      font-size: 30px;
       box-shadow: 0 5px 20px rgba(0,0,0,.25);
       z-index: 1000;
+      transition: .3s;
     }
 
-    /* RESPONSIVE */
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+
+    /* =========================
+       RESPONSIVE CELULAR
+    ========================= */
 
     @media(max-width: 768px) {
 
@@ -319,11 +385,27 @@
         display: none;
       }
 
+      .navbar {
+        justify-content: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
       .hero {
         text-align: center;
         justify-content: center;
         padding: 100px 25px;
-        background-position: 65% center;
+
+        background:
+          linear-gradient(
+            rgba(255,255,255,.85),
+            rgba(255,255,255,.55)
+          ),
+          url('dra-liz-recepcion.jpeg');
+
+        background-position: center;
       }
 
       .hero h1 {
@@ -334,8 +416,29 @@
         font-size: 20px;
       }
 
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 70px 25px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
       .about {
         grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+
+      .about-text h2 {
+        font-size: 36px;
       }
 
       .gallery-grid {
@@ -343,27 +446,35 @@
       }
 
       .gallery-grid img {
-        height: 300px;
+        height: 400px;
       }
 
-      section {
-        padding: 70px 25px;
+      .contact h2 {
+        font-size: 35px;
       }
 
     }
 
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- MENU -->
+
+  <!-- =========================
+       MENU
+  ========================= -->
 
   <header>
+
     <div class="navbar">
 
       <div class="logo">
-        DRA. LIZ VERA <span>| ODONTOLOGÍA</span>
+        DRA. LIZ VERA
+        <br>
+        <span>ODONTOLOGÍA</span>
       </div>
 
       <nav>
@@ -375,25 +486,41 @@
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- PORTADA -->
+
+  <!-- =========================
+       PORTADA
+  ========================= -->
 
   <section class="hero" id="inicio">
 
     <div class="hero-content">
 
-      <h1>Tu sonrisa merece el mejor cuidado</h1>
+      <h1>
+        Tu sonrisa merece
+        el mejor cuidado
+      </h1>
 
-      <h2>Dra. Liz Vera · Odontología Integral</h2>
+      <h2>
+        Dra. Liz Vera · Odontología Integral
+      </h2>
 
       <p>
-        Brindamos atención dental profesional y personalizada,
-        enfocándonos en la salud, estética y bienestar de tu sonrisa.
+        Atención odontológica profesional y personalizada,
+        enfocada en cuidar tu salud, mejorar tu sonrisa
+        y brindarte una experiencia cómoda y segura.
       </p>
 
-      <a href="https://wa.me/521XXXXXXXXXX" class="btn">
+      <!-- CAMBIAR NUMERO DE WHATSAPP -->
+
+      <a
+        href="https://wa.me/521XXXXXXXXXX"
+        target="_blank"
+        class="btn"
+      >
         Agenda tu cita
       </a>
 
@@ -402,13 +529,16 @@
   </section>
 
 
-  <!-- SERVICIOS -->
+
+  <!-- =========================
+       SERVICIOS
+  ========================= -->
 
   <section class="services" id="servicios">
 
     <div class="section-title">
 
-      <h2>Nuestros servicios</h2>
+      <h2>Nuestros Servicios</h2>
 
       <p>
         Atención profesional para cuidar y transformar tu sonrisa.
@@ -419,6 +549,7 @@
 
     <div class="services-grid">
 
+
       <div class="service-card">
 
         <div class="icon">🦷</div>
@@ -426,10 +557,12 @@
         <h3>Odontología General</h3>
 
         <p>
-          Prevención, diagnóstico y tratamientos para mantener una sonrisa saludable.
+          Prevención, diagnóstico y tratamientos para mantener
+          una sonrisa saludable.
         </p>
 
       </div>
+
 
 
       <div class="service-card">
@@ -439,10 +572,12 @@
         <h3>Estética Dental</h3>
 
         <p>
-          Tratamientos diseñados para mejorar la apariencia y armonía de tu sonrisa.
+          Tratamientos diseñados para mejorar la apariencia
+          y armonía de tu sonrisa.
         </p>
 
       </div>
+
 
 
       <div class="service-card">
@@ -452,10 +587,12 @@
         <h3>Blanqueamiento</h3>
 
         <p>
-          Recupera el brillo natural de tu sonrisa con tratamientos profesionales.
+          Recupera el brillo natural de tu sonrisa con
+          tratamientos profesionales.
         </p>
 
       </div>
+
 
 
       <div class="service-card">
@@ -465,10 +602,12 @@
         <h3>Ortodoncia</h3>
 
         <p>
-          Corrección de la posición dental para lograr una sonrisa funcional y estética.
+          Corrección de la posición dental para lograr una
+          sonrisa funcional y estética.
         </p>
 
       </div>
+
 
 
       <div class="service-card">
@@ -478,10 +617,12 @@
         <h3>Rehabilitación Dental</h3>
 
         <p>
-          Soluciones para recuperar la función y estética de tus dientes.
+          Soluciones para recuperar la función y estética
+          de tus dientes.
         </p>
 
       </div>
+
 
 
       <div class="service-card">
@@ -491,48 +632,57 @@
         <h3>Atención Personalizada</h3>
 
         <p>
-          Cada paciente recibe un tratamiento adaptado a sus necesidades.
+          Cada paciente recibe un tratamiento adaptado
+          a sus necesidades.
         </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- SOBRE LA DOCTORA -->
+
+  <!-- =========================
+       SOBRE LA DOCTORA
+  ========================= -->
 
   <section id="doctora">
 
     <div class="about">
 
+
       <div class="about-image">
 
-        <!-- CAMBIA ESTA FOTO POR UNA DE LA DRA. LIZ -->
-
-        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=80"
-        alt="Dra. Liz Vera">
+        <img
+          src="dra-liz-consultorio.jpeg"
+          alt="Dra. Liz Vera"
+        >
 
       </div>
+
 
 
       <div class="about-text">
 
         <h2>Dra. Liz Vera</h2>
 
-        <h3>Comprometida con tu salud y tu sonrisa</h3>
+        <h3>
+          Comprometida con tu salud y tu sonrisa
+        </h3>
 
         <p>
-          Mi compromiso es brindar atención odontológica de calidad,
-          creando una experiencia cómoda, profesional y personalizada
-          para cada paciente.
+          Mi compromiso es brindar atención odontológica
+          profesional, cercana y personalizada para cada paciente.
         </p>
 
         <p>
-          Creo que una sonrisa saludable puede transformar la confianza
-          y bienestar de las personas, por eso trabajamos con dedicación,
-          tecnología y atención cercana.
+          Creo que una sonrisa saludable puede transformar
+          la confianza y el bienestar de las personas.
+          Por eso, cada tratamiento se realiza con dedicación,
+          atención y compromiso.
         </p>
 
         <a href="#contacto" class="btn">
@@ -541,40 +691,55 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- GALERIA -->
+
+  <!-- =========================
+       GALERIA
+  ========================= -->
 
   <section class="gallery" id="galeria">
 
+
     <div class="section-title">
 
-      <h2>Conoce nuestro consultorio</h2>
+      <h2>Conoce nuestro espacio</h2>
 
       <p>
-        Un espacio pensado para tu comodidad y tranquilidad.
+        Un consultorio diseñado para brindarte comodidad,
+        confianza y atención profesional.
       </p>
 
     </div>
 
 
+
     <div class="gallery-grid">
 
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80">
+      <img
+        src="dra-liz-recepcion.jpeg"
+        alt="Consultorio Dra Liz Vera"
+      >
 
-      <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80">
-
-      <img src="https://images.unsplash.com/photo-1588776814546-daab30f3106f?auto=format&fit=crop&w=900&q=80">
+      <img
+        src="dra-liz-consultorio.jpeg"
+        alt="Dra Liz Vera Odontología"
+      >
 
     </div>
+
 
   </section>
 
 
-  <!-- CONTACTO -->
+
+  <!-- =========================
+       CONTACTO
+  ========================= -->
 
   <section class="contact" id="contacto">
 
@@ -584,18 +749,33 @@
       Estamos listos para ayudarte a cuidar tu sonrisa.
     </p>
 
-    <p>📍 Agrega aquí la dirección del consultorio</p>
+    <p>
+      📍 Agrega aquí la dirección del consultorio
+    </p>
 
-    <p>📞 +52 XXX XXX XXXX</p>
+    <p>
+      📞 +52 XXX XXX XXXX
+    </p>
 
-    <a href="https://wa.me/521XXXXXXXXXX" class="btn">
+
+    <!-- CAMBIAR NUMERO DE WHATSAPP -->
+
+    <a
+      href="https://wa.me/521XXXXXXXXXX"
+      target="_blank"
+      class="btn"
+    >
       Contactar por WhatsApp
     </a>
+
 
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -604,15 +784,21 @@
   </footer>
 
 
-  <!-- WHATSAPP -->
+
+  <!-- =========================
+       BOTON WHATSAPP
+  ========================= -->
 
   <a
     href="https://wa.me/521XXXXXXXXXX"
-    class="whatsapp"
     target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp"
   >
     ☎
   </a>
 
+
 </body>
+
 </html>
